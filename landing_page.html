@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>13COMP Program</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="12COMP Prog DB">
+  <meta name="keywords" content="12COMP, Prog, DB">
+  <meta name="author" content="Wina Prasetyo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets ********************************************-->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- P5.js **************************************************-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+
+  <!-- firebase start *****************************************-->
+  <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <!-- firebase end ******************************************-->
+
+  <script defer src="fb_io.js"></script>
+  <script defer src="interface.js"></script>
+  <script defer src="bb_game.js"></script>
+  <script defer src="reg_manager.js"></script>
+  <script defer src="ttt_game.js"></script>
+  <script defer src="ad_manager.js"></script>
+</head>
+  
+<!--***************************************************
+//  BODY
+****************************************************-->
+<body class="w3-container w3-white" onload="int_getData('landing_page')">
+
+  <!--***************************************************
+  //  LANDING PAGE
+  ****************************************************-->
+<!--   <section id="landingPage"> -->
+    <div class="w3-row w3-container h15">
+      <h1 class="w3-wide w3-center">Prasetyo's landing page</h1>
+    </div>
+
+    <div class="w3-row">
+      
+      <div class="w3-container w3-third w3-purple h82">
+        <p><button class="w3-button w3-border 
+             w3-large" onclick="int_bbEnter()">Bouncing Ball</button></p>
+        <p><button class="w3-button w3-border
+             w3-large" onclick="int_tttEnter()">Tic Tac Toe</button></p>
+        <p><button class="w3-button w3-border
+             w3-large" onclick="int_cEnter()">Chess</button></p>
+        <p><button class="w3-button w3-border 
+             w3-large" onclick="int_gtnEnter()">Guess The Number</button></p>
+        <p><button class="w3-button w3-border w3-large" 
+             onclick="int_leadEnter()">Leaderboard</button></p>
+        <p><button id="ad_button" class="w3-button w3-border
+             w3-large" onclick="int_adminEnter()">Admin</button></p>
+      </div>
+      
+      <div class="w3-container w3-twothird h82 
+        w3-display-container w3-hover-opacity">
+        <!-- <img src="https://tinyurl.com/bdf5fdpy" 
+          alt=" cover image" />
+        <div class="w3-display-middle w3-display-hover 
+            w3-xlarge">
+            <button class="w3-black" 
+            onclick="window.open('https://tinyurl.com/bdf5fdpy')"
+              >https://tinyurl.com/bdf5fdpy</button>
+        </div> -->
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://tinyurl.com/bdf5fdpy" alt="dragon image" style="width:100%">
+          <div class="text">https://tinyurl.com/bdf5fdpy</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://tinyurl.com/2fe3jtep" alt="bubble image" style="width:100%">
+          <div class="text">https://tinyurl.com/2fe3jtep</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://tinyurl.com/y5256b96" alt="tictactoe image" style="width:100%">
+          <div class="text">https://tinyurl.com/y5256b96</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+      </div> 
+
+      
+      
+    </div>
+<!--   </section> -->
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>13COMP Program</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="12COMP Prog DB">
+  <meta name="keywords" content="12COMP, Prog, DB">
+  <meta name="author" content="Wina Prasetyo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets ********************************************-->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- P5.js **************************************************-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+
+  <!-- firebase start *****************************************-->
+  <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <!-- firebase end ******************************************-->
+
+  <script defer src="fb_io.js"></script>
+  <script defer src="interface.js"></script>
+  <script defer src="bb_game.js"></script>
+  <script defer src="ttt_game.js"></script>
+  <script defer src="reg_manager.js"></script>
+  <script defer src="ad_manager.js"></script>
+</head>
+  
+<!--***************************************************
+//  BODY
+****************************************************-->
+<body class="w3-container w3-white" onload="int_getData('bb_page')">
+  
+  <!--***************************************************
+  //  BB GAME PAGE
+  ****************************************************-->
+    <div class="w3-row w3-container h15">
+      <h1 class="w3-wide">Prasetyo's Bouncing Ball game page</h1>
+    </div>
+    
+    <div class="w3-row">
+      <div class="w3-container w3-third w3-purple h82">
+        <p><button id="bbBtn" class="w3-button w3-border 
+             w3-large btn" onclick="bb_gameStart()"
+             >START</button></p>
+
+        <hr></hr>
+        
+<!--         <p class="w3-padding" id="bbLevel">Level : 1</p> -->
+        <p class="w3-padding" id="bbTime">Time : 0</p>
+        <p class="w3-padding" id="bbHits">Hits : 0</p>
+        <p class="w3-padding" id="bbMiss">Miss : 0</p>
+        <p class="w3-padding" id="bbUpdate">Lowest Time : 0</p>
+        
+        <hr></hr>
+        
+        <p><button class="w3-button w3-border modal-button
+             w3-large" href="#myModal1">INSTRUCTIONS</button></p>
+
+        <!-- BB Modal -->
+        <div id="myModal1" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <h2>INSTRUCTIONS</h2>
+            </div>
+            <div class="modal-body">
+              <p>Click Start</p>
+              <p>Pop the bubbles</p>
+            </div>
+            <div class="modal-footer">
+              <h3>Have fun!</h3>
+            </div>
+          </div>
+        </div>
+        
+        <p><button class="w3-button w3-border
+             w3-large" onclick="int_back()">BACK</button></p>
+      </div>
+      
+      <div id="bbCanvas" class="w3-twothird w3-container h82">
+        
+      </div>    
+    </div>
+
+</body>
+</html>

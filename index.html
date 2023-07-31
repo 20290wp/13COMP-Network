@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>13COMP Program</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="12COMP Prog DB">
+  <meta name="keywords" content="12COMP, Prog, DB">
+  <meta name="author" content="Wina Prasetyo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets ********************************************-->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- P5.js **************************************************-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+
+  <!-- firebase start *****************************************-->
+  <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <!-- firebase end ******************************************-->
+
+  <script defer src="bb_game.js"></script>
+  <script defer src="ttt_game.js"></script>
+  <script defer src="fb_io.js"></script>
+  <script defer src="interface.js"></script>
+  <script defer src="reg_manager.js"></script>
+  <script defer src="ad_manager.js"></script>
+</head>
+  
+<!--***************************************************
+//  BODY
+****************************************************-->
+<body class="w3-container w3-white">
+
+  <!--***************************************************
+  //  START PAGE
+  ****************************************************-->
+  <section id="startPage">
+    <div class="w3-row w3-container w3-center">
+      <h1 class="w3-wide">Prasetyo's Start Page</h1>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-container container w3-center">
+        <p><button class="w3-button w3-border but w3-xlarge" 
+             onclick="int_pressEnter()">ENTER</button></p>
+        
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

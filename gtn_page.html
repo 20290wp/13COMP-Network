@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>13COMP Program</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="12COMP Prog DB">
+  <meta name="keywords" content="12COMP, Prog, DB">
+  <meta name="author" content="Wina Prasetyo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- stylesheets ********************************************-->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- P5.js **************************************************-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+
+  <!-- firebase start *****************************************-->
+  <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>  
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script> 
+  <!-- firebase end ******************************************-->
+
+  <script defer src="fb_io.js"></script>
+  <script defer src="interface.js"></script>
+  <script defer src="bb_game.js"></script>
+  <script defer src="reg_manager.js"></script>
+  <script defer src="ttt_game.js"></script>
+  <script defer src="ad_manager.js"></script>
+  <script defer src="gtn.js"></script>
+  <script defer src="lg_manager.js"></script>
+</head>
+  
+<!--***************************************************
+//  BODY
+****************************************************-->
+<body class="w3-container w3-white" onload="int_getData('gtn_page')">
+
+  <!--***************************************************
+  //  GTN PAGE
+  ****************************************************-->
+    <div class="w3-row w3-container h15">
+      <h1 class="w3-wide w3-center">Guess The Number Game page</h1>
+    </div>
+
+    <div class="w3-row">
+      
+      <div class="w3-container w3-third w3-purple h82">
+        <img id="ppImg1" class="gpp" src="assets/images/img_avatar.png" alt="User 1 profile picture">
+        <p id="gtn_p1">P1</p>
+        
+        <form id="gtn_form1" onsubmit="return false;">
+          <p>Your Number</p>
+          <label id="gtn_label1" for="gtn_quantity1">Quantity (between 1 and range):</label>
+          <input id="gtn_quantity1" min="1" required name="quantity" 
+                     type="number" placeholder="Number"> <br>
+          <input type="submit" id="gtn_submit1" onclick="gtn_number()">
+        </form>
+      
+        <hr>
+
+        <form id="gtn_guess_form1" onsubmit="return false;">
+          <p>Your Guess</p>
+          <label id="gtn_guess_label1" for="gtn_guess_quantity1">Quantity (between 1 and range):</label>
+          <input id="gtn_guess_quantity1" min="1" required name="gQuantity"
+                     type="number" placeholder="Guess"><br><br>
+          <input type="submit" id="gtn_guess_submit1" onclick="gtn_guess_number()">
+          <div id="timer1"></div>
+        </form>
+        
+      </div>
+
+      <div class="w3-container w3-third w3-white h82">
+        <p>Guesses</p>
+        
+        <section id="result">
+          <div align="center">
+            <a href="#loginScreen" class="button"></a>
+          </div>
+          <div id="loginScreen">
+            <p id="gtn_result">You lose</p>
+            <a href="gtn_lobby_page.html" class="cancel">×</a>
+          </div>
+          <div id="cover" >
+          </div>
+        </section>
+        
+      </div>
+      
+      <div class="w3-container w3-third w3-purple h82">
+        <img id="ppImg2" class="gpp" src="assets/images/img_avatar.png" alt="User 2 profile picture">
+        <p id="gtn_p2">P2</p>
+
+        <form id="gtn_form2" onsubmit="return false;">
+          <p>Your Number</p>
+          <label id="gtn_label2" for="gtn_quantity2">Quantity (between 1 and range):</label>
+          <input id="gtn_quantity2" min="1" required name="quantity" 
+                     type="number" placeholder="Number"> <br>
+          <input type="submit" id="gtn_submit2" onclick="gtn_number()">
+        </form>
+
+        <hr>
+        
+        <form id="gtn_guess_form2" onsubmit="return false;">
+          <p>Your Guess</p>
+          <label id="gtn_guess_label2" for="gtn_guess_quantity2">Quantity (between 1 and range):</label>
+          <input id="gtn_guess_quantity2" min="1" required name="gQuantity"
+                     type="number" placeholder="Guess"><br><br>
+          <input type="submit" id="gtn_guess_submit2" onclick="gtn_guess_number()">
+          <div id="timer2"></div>
+        </form>
+        
+      </div>
+      
+    </div>
+
+  
+  
+
+    
+
+</body>
+</html>
